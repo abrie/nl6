@@ -37,9 +37,9 @@ yarn add phaser
 
 To use Phaser in the development setup, follow these steps:
 
-1. Import Phaser in your `src/main.ts` file:
+1. Import the `PlayScene` class in your `src/main.ts` file:
    ```typescript
-   import Phaser from 'phaser';
+   import PlayScene from './PlayScene';
    ```
 
 2. Initialize a Phaser game in your `src/main.ts` file:
@@ -48,24 +48,8 @@ To use Phaser in the development setup, follow these steps:
      type: Phaser.AUTO,
      width: 800,
      height: 600,
-     scene: {
-       preload: preload,
-       create: create,
-       update: update
-     }
+     scene: PlayScene
    };
 
    const game = new Phaser.Game(config);
-
-   function preload() {
-     // Load assets here
-   }
-
-   function create() {
-     // Create game objects here
-   }
-
-   function update() {
-     // Update game objects here
-   }
    ```
