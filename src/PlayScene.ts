@@ -1,7 +1,10 @@
 import * as Phaser from "phaser";
 import TextureGenerator from "./TextureGenerator";
+import MapGenerator from "./MapGenerator";
 
 class PlayScene extends Phaser.Scene {
+  private mapGenerator: MapGenerator;
+
   constructor() {
     super({ key: 'PlayScene' });
   }
@@ -11,11 +14,12 @@ class PlayScene extends Phaser.Scene {
   }
 
   create() {
-    this.add.image(400, 300, 'redTexture');
+    this.mapGenerator = new MapGenerator(this, 32, 25, 19, 0.5);
+    this.mapGenerator.generateMap();
   }
 
   update() {
-    // Update game objects here
+    this.mapGenerator.updateMap();
   }
 }
 
