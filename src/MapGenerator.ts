@@ -21,7 +21,7 @@ class MapGenerator {
 
     this.tilemap = this.scene.make.tilemap({ width: this.mapWidth, height: this.mapHeight, tileWidth: this.tileSize, tileHeight: this.tileSize });
     this.tileset = this.tilemap.addTilesetImage('tiles');
-    this.layer = this.tilemap.createBlankDynamicLayer('layer', this.tileset);
+    this.layer = this.tilemap.createDynamicLayer('layer', this.tileset);
   }
 
   generateMap() {
