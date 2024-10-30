@@ -1,4 +1,5 @@
 import * as Phaser from "phaser";
+import TextureGenerator from "./TextureGenerator";
 
 const config = {
 	type: Phaser.AUTO,
@@ -15,11 +16,11 @@ const config = {
 const game = new Phaser.Game(config);
 
 function preload() {
-	// Load assets here
+	TextureGenerator.generateSolidTexture(this, 'redTexture', 100, 100, 0xff0000);
 }
 
 function create() {
-	// Create game objects here
+	this.add.image(400, 300, 'redTexture');
 }
 
 function update() {
