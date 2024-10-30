@@ -8,7 +8,9 @@
     "build": "vite build",
     "serve": "vite preview"
   },
-  "dependencies": {},
+  "dependencies": {
+    "phaser": "^3.55.2"
+  },
   "devDependencies": {
     "typescript": "^4.3.5",
     "vite": "^2.4.4"
