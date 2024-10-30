@@ -1,0 +1,16 @@
+{
+  "name": "nl6",
+  "version": "1.0.0",
+  "description": "A vanilla TypeScript app powered by Vite",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^4.3.5",
+    "vite": "^2.4.4"
+  }
+}
