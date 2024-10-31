@@ -10,7 +10,7 @@ class MapGenerator {
   private noiseThreshold: number;
   private tilemap: Phaser.Tilemaps.Tilemap;
   private tileset: Phaser.Tilemaps.Tileset;
-  private layer: Phaser.Tilemaps.DynamicTilemapLayer;
+  private layer: Phaser.Tilemaps.TilemapLayer;
 
   constructor(scene: Phaser.Scene, tileSize: number, mapWidth: number, mapHeight: number, noiseThreshold: number) {
     this.scene = scene;
@@ -21,7 +21,7 @@ class MapGenerator {
 
     this.tilemap = this.scene.make.tilemap({ width: this.mapWidth, height: this.mapHeight, tileWidth: this.tileSize, tileHeight: this.tileSize });
     this.tileset = this.tilemap.addTilesetImage('tiles');
-    this.layer = this.tilemap.createDynamicLayer('layer', this.tileset);
+    this.layer = this.tilemap.createLayer('layer', this.tileset);
   }
 
   generateMap() {
